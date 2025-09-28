@@ -1,0 +1,44 @@
+# Flutter/Dart/Pub related
+.dart_tool/
+.packages
+.pub-cache/
+build/
+coverage/
+lib/generated_plugin_registrant.dart
+
+# IntelliJ related
+*.iml
+.idea/
+*.ipr
+*.iws
+
+# VS Code related
+.vscode/
+
+# Android related
+android/.gradle/
+android/app/build/
+android/local.properties
+android/key.properties
+
+# iOS/Xcode related
+ios/Pods/
+ios/Runner/GeneratedPluginRegistrant.*
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/Flutter/Generated.xcconfig
+ios/Flutter/ephemeral/
+ios/.symlinks/
+
+# Firebase config files (mantén solo los tuyos locales)
+**/GoogleService-Info.plist
+**/google-services.json
+
+# Miscellaneous
+*.log
+*.lock
+*.tmp
+*.swp
+*.DS_Store
+*.keystore
+*.jks

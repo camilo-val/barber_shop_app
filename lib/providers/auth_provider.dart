@@ -8,7 +8,6 @@ class AuthProvider with ChangeNotifier {
   bool get isLoggedIn => user != null;
 
   Future<void> restoreSession() async {
-    // Firebase restaura sesión automáticamente. Puedes leer extras del storage si los guardas.
     notifyListeners();
   }
 

@@ -1,4 +1,5 @@
 import 'package:barber_shop_app/providers/carts_provider.dart';
+import 'package:barber_shop_app/screens/widget/product_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -18,25 +19,10 @@ class CartScreen extends StatelessWidget {
               separatorBuilder: (_, __) => const Divider(height: 1),
               itemBuilder: (context, i) {
                 final item = cart.items[i];
-                return ListTile(
-                  leading: Image.network(
-                    item.product.image,
-                    width: 48,
-                    height: 48,
-                    fit: BoxFit.cover,
-                  ),
-                  title: Text(
-                    item.product.title,
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                  subtitle: Text(
-                    'Cant: ${item.quantity} • ${item.product.price.toStringAsFixed(2)} c/u',
-                  ),
-                  trailing: IconButton(
-                    icon: const Icon(Icons.delete_outline),
-                    onPressed: () => cart.remove(item.product),
-                  ),
+                return ProductWidget(
+                  product: item.product,
+                  onEliminated: (p) => cart.remove(p),
+                  quantity: item.quantity,
                 );
               },
             ),
